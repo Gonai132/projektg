@@ -12,6 +12,12 @@
   --price-color: #EE9972;
 }
 
+
+h1 {
+  text-align: center;
+  padding: 20px;
+}
+
 body {
   font-family: 'Karla', sans-serif;
   color: var(--dark-text);
@@ -198,6 +204,13 @@ button {
 button:hover {
   opacity: 0.9;
   transition: 0.3s;
+}
+
+footer  {
+  background-color: var(--primary-green);
+  color: white;
+  text-align: center;
+  padding: 10px 0;
 }
 
 /* RESPONSIVE */

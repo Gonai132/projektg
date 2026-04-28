@@ -4,7 +4,6 @@ import Main from "./components/Main";
 import About from "./components/About";
 import Menu from "./components/Menu";
 import Order from "./components/Order";
-import Reservations from "./components/Reservations";
 import Login from "./components/Login";
 import { Routes, Route } from "react-router-dom";
 
@@ -16,10 +15,9 @@ function App() {
       <Header />
 
       <Routes>
-        <Route path="/" element={<Main />} />
+        <Route path="/*" element={<Main />} />
         <Route path="/about" element={<About />} />
         <Route path="/menu" element={<Menu />} />
-        <Route path="/reservations" element={<Reservations />} />
         <Route path="/order" element={<Order />} />
         <Route path="/login" element={<Login />} />
       </Routes>

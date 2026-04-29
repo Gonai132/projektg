@@ -1,6 +1,6 @@
 import BookingForm from "./BookingForm";
 
-function BookingPage({ availableTimes = [], dispatch = () => {} }) {
+function BookingPage({ availableTimes = [], dispatch = () => {}, submitForm }) {
   return (
     <section className="hero">
     <section className="container booking-page">
@@ -9,6 +9,7 @@ function BookingPage({ availableTimes = [], dispatch = () => {} }) {
       <BookingForm
         availableTimes={availableTimes}
         dispatch={dispatch}
+        submitForm={submitForm}
       />
     </section>
     </section>

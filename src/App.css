@@ -276,6 +276,11 @@ h1.page2 {
   box-shadow: 0 4px 20px rgba(0,0,0,0.1);
 }
 
+.book-text {
+  text-align: center;
+}
+
+
 /* RESPONSIVE */
 @media (max-width: 768px) {
   .hero-content {

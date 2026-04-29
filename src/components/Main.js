@@ -1,6 +1,7 @@
 import { useReducer } from "react";
-import { Routes, Route } from "react-router-dom";
+import { Routes, Route, useNavigate } from "react-router-dom";
 import { Link } from "react-router-dom";
+import { fetchAPI } from "../api";
 
 import greekSalad from "../img/greek-salad.jpg";
 import bruschetta from "../img/bruchetta.svg";
@@ -8,24 +9,34 @@ import dessert from "../img/dessert.jpg";
 import food from "../img/food.jpg";
 
 import BookingPage from "./BookingPage";
+import ConfirmedBooking from "./ConfirmedBooking";
 
-// 👉 potrzebne do testów
 const initializeTimes = () => {
-  return ["17:00", "18:00", "19:00", "20:00", "21:00", "22:00"];
+  return fetchAPI(new Date());
 };
 
 const updateTimes = (state, action) => {
   if (action.type === "UPDATE_TIMES") {
-    return initializeTimes();
+    return fetchAPI(action.date);
   }
   return state;
 };
 
+const submitAPI = () => true;
+
 function Main() {
+  const navigate = useNavigate();
+
   const [availableTimes, dispatch] = useReducer(
     updateTimes,
     initializeTimes()
   );
+
+  const submitForm = (formData) => {
+    if (submitAPI(formData)) {
+      navigate("/confirmed");
+    }
+  };
 
   return (
     <main>
@@ -45,7 +56,6 @@ function Main() {
                       We are a family owned Mediterranean restaurant, focused on traditional recipes served with a modern twist.
                     </p>
 
-                    {/* NIE ruszam buttona */}
                     <button>
                       <Link to="/reservations">Reserve a Table</Link>
                     </button>
@@ -114,9 +124,12 @@ function Main() {
             <BookingPage
               availableTimes={availableTimes}
               dispatch={dispatch}
+              submitForm={submitForm}
             />
           }
         />
+
+        <Route path="/confirmed" element={<ConfirmedBooking />} />
 
       </Routes>
     </main>

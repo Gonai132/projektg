@@ -23,6 +23,10 @@ body {
   margin: 0 auto;
 }
 
+.main .container {
+  padding: 0 20px;
+}
+
 section {
   padding: 60px 0;
 }
@@ -38,7 +42,7 @@ nav a {
   text-decoration: none;
   color: var(--dark-text);
   font-weight: 700;
-  transition: linear 0.15s; 
+  transition: linear 0.15s;
 }
 
 nav a:hover {
@@ -51,10 +55,12 @@ nav a:hover {
   justify-content: space-between;
   align-items: center;
   padding: 20px 0;
+  position: relative;
 }
 
 .logo {
   height: 50px;
+  padding-left: 20px;
 }
 
 nav ul {
@@ -125,6 +131,12 @@ nav ul {
   border-radius: 16px;
   position: relative;
   top: 40px;
+  transition: linear 0.2s;
+}
+
+.food-image:hover {
+  transform: scale(1.02);
+
 }
 
 .pages {
@@ -159,12 +171,44 @@ nav ul {
   background-color: var(--light-bg);
   border-radius: 16px;
   overflow: hidden;
+    display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.card a {
+  display: inline-block;
+  margin-top: 10px;
+  padding:5px 20px;
+  background-color: var(--light-color);
+  color: var(--price-color);
+  font-weight: 600;
+  letter-spacing: 1px;
+  border: none;
+  border-radius: 12px;
+  text-decoration: none;
+  margin-top: auto;
+  align-self: center;
+  margin-bottom: 20px;
+  transition: 0.3s;
+}
+
+.card a:hover {
+  background-color: var(--price-color);
+  color: #333333;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
 }
 
 .card img {
   width: 100%;
   height: 200px;
   object-fit: cover;
+  transition: linear 0.2s;
+}
+
+.card img:hover {
+  transform: scale(1.03);
+
 }
 
 .card-header {
@@ -201,6 +245,11 @@ button {
   border-radius: 12px;
   cursor: pointer;
   transition: 0.3s;
+}
+
+button a {
+  text-decoration: none;
+  color: #333333;
 }
 
 button:hover {
@@ -304,24 +353,153 @@ h1.page2 {
   padding: 0px;
 }
 
+.hamburger {
+  display: none;
+  font-size: 28px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  margin-left: auto;
+}
+
+.footer {
+  background-color: var(--price-color);
+  color: white;
+  padding: 40px 0 20px;
+}
+
+.footer-content {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 40px;
+}
+
+.footer-col h4 {
+  margin-bottom: 12px;
+  color: var(--accent-yellow);
+  font-weight: bolder;
+}
+
+.footer-col ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-col li {
+  margin-bottom: 8px;
+}
+
+.footer-col a {
+  color: white;
+  text-decoration: none;
+}
+
+.footer-col a:hover {
+  text-decoration: underline;
+}
+
+.footer-logo {
+  width: 120px;
+}
+
+.footer-copy {
+  text-align: center;
+  margin-top: 10px;
+  font-size: 14px;
+  color: var(--primary-green);
+}
+
+
 /* RESPONSIVE */
 @media (max-width: 768px) {
+
+  .header{
+    padding: 0px;
+  }
+
+  nav ul {
+    display: none;
+  }
+
   .hero-content {
     grid-template-columns: 1fr;
     text-align: center;
   }
 
   .hero-text {
-    margin: 0 auto;
+    margin: 20px auto 5px;
   }
 
   .food-image {
     top: 20px;
-    width: 250px;
-    height: 300px;
+    width: 280px;
+    height: 280px;
   }
 
-  .cards {
+   .hero-img-wrapper {
+    justify-content: center;
+    margin-top: 80px;
+  }
+
+  .food-image {
+    position: static;
+    margin: -50px auto;
+    display: block;
+  }
+
+    .cards {
     grid-template-columns: 1fr;
+  }
+
+  .card {
+    max-width: 100%;
+  }
+  .hamburger {
+    display: block;
+  }
+
+  .hamburger:hover {
+    box-shadow: none;
+    color: var(--primary-green);
+  }
+
+  .specials-header h2 {
+    font-size: 28px;
+  }
+  
+  .specials button {
+    padding: 10px 10px;
+    margin-top: 0px;
+  }
+
+  .nav {
+    position: absolute;
+    top: 70px;
+    right: 20px;
+    z-index: 1000;
+  }
+
+  .nav ul {
+    display: none;
+    flex-direction: column;
+    background: white;
+    padding: 20px;
+    border-radius: 12px;
+    gap: 16px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+  }
+
+  .nav.open ul {
+    display: flex;
+  
+  }
+
+   .footer-content {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+
+  .footer-logo {
+    margin: 0 auto;
   }
 }

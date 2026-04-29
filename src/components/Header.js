@@ -1,14 +1,21 @@
 import { Link } from "react-router-dom";
+import { useState } from "react";
 import logoH from "../img/logoH.png";
 
 function Header() {
+  const [open, setOpen] = useState(false);
+
   return (
     <header className="container header">
       <Link to="/" aria-label="On Click">
         <img src={logoH} alt="Little Lemon logo" className="logo" />
       </Link>
 
-      <nav aria-label="Main navigation">
+      <button className="hamburger" onClick={() => setOpen(!open)}>
+        ☰
+      </button>
+
+      <nav className={open ? "nav open" : "nav"}>
         <ul>
           <li><Link to="/">Home</Link></li>
           <li><Link to="/about">About</Link></li>

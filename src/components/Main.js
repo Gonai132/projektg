@@ -46,7 +46,7 @@ function Main() {
           path="/"
           element={
             <>
-              <section className="hero">
+              <section className="hero main">
                 <div className="container hero-content">
 
                   <div className="hero-text">
@@ -68,12 +68,12 @@ function Main() {
                 </div>
               </section>
 
-              <section className="specials">
+              <section className="specials main">
                 <div className="container">
 
                   <div className="specials-header">
                     <h2>This week's specials!</h2>
-                    <button aria-label="On Click">Online Menu</button>
+                    <button aria-label="On Click"><Link to="/reservations">Online Menu</Link></button>
                   </div>
 
                   <div className="cards">
@@ -87,6 +87,7 @@ function Main() {
                       <p>
                         The famous greek salad of crispy lettuce, peppers, olives and our Chicago style feta cheese, garnished with crunchy garlic and rosemary croutons.
                       </p>
+                       <Link to="/order">Order Online</Link>
                     </article>
 
                     <article className="card">
@@ -98,6 +99,7 @@ function Main() {
                       <p>
                         Our Bruschetta is made from grilled bread that has been smeared with garlic and seasoned with salt and olive oil.
                       </p>
+                       <Link to="/order">Order Online</Link>
                     </article>
 
                     <article className="card">
@@ -109,6 +111,7 @@ function Main() {
                       <p>
                         This comes straight from grandma's recipe book, every last ingredient has been sourced and is as authentic as it can be imagined.
                       </p>
+                       <Link to="/order">Order Online</Link>
                     </article>
 
                   </div>

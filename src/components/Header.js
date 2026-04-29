@@ -4,9 +4,11 @@ import logoH from "../img/logoH.png";
 function Header() {
   return (
     <header className="container header">
-      <Link to="/"><img src={logoH} alt="Little Lemon logo" className="logo" /></Link>
+      <Link to="/" aria-label="On Click">
+        <img src={logoH} alt="Little Lemon logo" className="logo" />
+      </Link>
 
-      <nav>
+      <nav aria-label="Main navigation">
         <ul>
           <li><Link to="/">Home</Link></li>
           <li><Link to="/about">About</Link></li>

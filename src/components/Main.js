@@ -56,7 +56,7 @@ function Main() {
                       We are a family owned Mediterranean restaurant, focused on traditional recipes served with a modern twist.
                     </p>
 
-                    <button>
+                    <button aria-label="On Click">
                       <Link to="/reservations">Reserve a Table</Link>
                     </button>
                   </div>
@@ -73,7 +73,7 @@ function Main() {
 
                   <div className="specials-header">
                     <h2>This week's specials!</h2>
-                    <button>Online Menu</button>
+                    <button aria-label="On Click">Online Menu</button>
                   </div>
 
                   <div className="cards">

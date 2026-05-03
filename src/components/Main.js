@@ -10,6 +10,10 @@ import food from "../img/food.jpg";
 
 import BookingPage from "./BookingPage";
 import ConfirmedBooking from "./ConfirmedBooking";
+import About from "./About";
+import Menu from "./Menu";
+import Order from "./Order";
+import Login from "./Login";
 
 const initializeTimes = () => {
   return fetchAPI(new Date());
@@ -73,7 +77,7 @@ function Main() {
 
                   <div className="specials-header">
                     <h2>This week's specials!</h2>
-                    <button aria-label="On Click"><Link to="/reservations">Online Menu</Link></button>
+                    <button aria-label="On Click"><Link to="/menu">Online Menu</Link></button>
                   </div>
 
                   <div className="cards">
@@ -87,7 +91,7 @@ function Main() {
                       <p>
                         The famous greek salad of crispy lettuce, peppers, olives and our Chicago style feta cheese, garnished with crunchy garlic and rosemary croutons.
                       </p>
-                       <Link to="/order">Order Online</Link>
+                      <Link to="/order">Order Online</Link>
                     </article>
 
                     <article className="card">
@@ -99,7 +103,7 @@ function Main() {
                       <p>
                         Our Bruschetta is made from grilled bread that has been smeared with garlic and seasoned with salt and olive oil.
                       </p>
-                       <Link to="/order">Order Online</Link>
+                      <Link to="/order">Order Online</Link>
                     </article>
 
                     <article className="card">
@@ -111,7 +115,7 @@ function Main() {
                       <p>
                         This comes straight from grandma's recipe book, every last ingredient has been sourced and is as authentic as it can be imagined.
                       </p>
-                       <Link to="/order">Order Online</Link>
+                      <Link to="/order">Order Online</Link>
                     </article>
 
                   </div>
@@ -122,7 +126,7 @@ function Main() {
         />
 
         <Route
-          path="/reservations"
+          path="reservations"
           element={
             <BookingPage
               availableTimes={availableTimes}
@@ -132,7 +136,11 @@ function Main() {
           }
         />
 
-        <Route path="/confirmed" element={<ConfirmedBooking />} />
+        <Route path="confirmed" element={<ConfirmedBooking />} />
+        <Route path="about" element={<About />} />
+        <Route path="menu" element={<Menu />} />
+        <Route path="order" element={<Order />} />
+        <Route path="login" element={<Login />} />
 
       </Routes>
     </main>
@@ -140,5 +148,4 @@ function Main() {
 }
 
 export default Main;
-
 export { initializeTimes, updateTimes };

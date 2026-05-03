@@ -33,9 +33,9 @@ function Footer() {
         <div className="footer-col">
           <h4>Social Media</h4>
           <ul>
-            <li><a href="#">Facebook</a></li>
-            <li><a href="#">Instagram</a></li>
-            <li><a href="#">Twitter</a></li>
+            <li><a href="https://www.facebook.com">Facebook</a></li>
+            <li><a href="https://www.instagram.com">Instagram</a></li>
+            <li><a href="https://www.twitter.com">Twitter</a></li>
           </ul>
         </div>
 

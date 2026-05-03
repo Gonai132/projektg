@@ -1,5 +1,7 @@
 # This is a project for Little Lemon Restaurant web app created in React by Gosia
 
+You can view the app on the deployment page: https://gonai132.github.io/projektg/
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).

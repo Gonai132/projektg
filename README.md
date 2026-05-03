@@ -1,3 +1,5 @@
+# This is a project for Little Lemon Restaurant web app created in React by Gosia
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).

@@ -2,6 +2,24 @@
 
 You can view the app on the deployment page: https://gonai132.github.io/projektg/
 
+# Setup Instructions
+
+    Must have: Node.js (v14 or higher) + npm
+
+    Clone the repository: git clone https://github.com/Gonai132/projektg/
+
+    Go into the project folder: cd projektg
+
+    Install dependencies: npm install
+
+    Start the app: npm start
+
+    Open your browser and go to: http://localhost:3000
+
+# Running Tests
+
+npm test
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).

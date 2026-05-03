@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/projektg/static/css/main.a6193780.css",
-    "main.js": "/projektg/static/js/main.91f89e63.js",
+    "main.js": "/projektg/static/js/main.bb9671b3.js",
     "static/js/453.e17434a5.chunk.js": "/projektg/static/js/453.e17434a5.chunk.js",
     "static/media/bruchetta.svg": "/projektg/static/media/bruchetta.29ea078fea3d3120ed22402e901b5bbc.svg",
     "static/media/greek-salad.jpg": "/projektg/static/media/greek-salad.bed423a1fab5b210e347.jpg",
@@ -10,11 +10,11 @@
     "static/media/logoH.png": "/projektg/static/media/logoH.d4cae6fac8384c2dae04.png",
     "index.html": "/projektg/index.html",
     "main.a6193780.css.map": "/projektg/static/css/main.a6193780.css.map",
-    "main.91f89e63.js.map": "/projektg/static/js/main.91f89e63.js.map",
+    "main.bb9671b3.js.map": "/projektg/static/js/main.bb9671b3.js.map",
     "453.e17434a5.chunk.js.map": "/projektg/static/js/453.e17434a5.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.a6193780.css",
-    "static/js/main.91f89e63.js"
+    "static/js/main.bb9671b3.js"
   ]
 }
